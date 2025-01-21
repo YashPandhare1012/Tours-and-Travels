@@ -4,140 +4,180 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazing Andaman Tour</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f8fb;
-        color: #333;
-      }
-      header {
-        background-color: #5c5c5d;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 15px;
-      }
-      .card {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
-      .card-header {
-        background-color: #7e7f81;
-        color: white;
-        padding: 10px 15px;
-        font-size: 1.2em;
-      }
-      .card-body {
-        padding: 15px;
-      }
-      .price-calculator {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      label {
-        display: block;
-        margin: 10px 0 5px;
-        font-weight: bold;
-      }
-      input[type="number"] {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #0074d9;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #005bb5;
-      }
-      .result {
-        margin-top: 15px;
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
   </head>
-  <body>
-    <header>
-      <h1>Amazing Andaman 5 Nights / 6 Days Tour</h1>
+  <body class="page-andaman">
+    <!-- header of page -->
+    <header class="header-andaman">
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <img
+        src="Images/logo.jpg"
+        alt="Magical Holidays"
+        style="
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 5px;
+        "
+      />
+      <a href="#" class="logo"><span>M</span>agical <span>H</span>olidays</a>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#book">book</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
     </header>
-    <div class="container">
-      <!-- Day Cards -->
-      <div class="card">
-        <div class="card-header">Day 1: May 15, 2024</div>
-        <div class="card-body">
-          <ul>
-            <li>Airport pickup and warm welcome.</li>
-            <li>Hotel transfer for a delightful stay.</li>
-            <li>Visit the historic Cellular Jail.</li>
-            <li>Relax at Corbyn's Cove Beach.</li>
-            <li>
-              Experience the mesmerizing Light & Sound Show at Cellular Jail.
-            </li>
-          </ul>
+
+    <div class="container2">
+      <!-- title of page -->
+      <div class="location-heading">
+        <div
+          style="
+            background-color: black;
+            width: inherit;
+            height: inherit;
+            border-radius: 8px;
+            opacity: 0.4;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            top: 450px;
+            right: 120px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+          "
+        >
+          Amazing Andaman 5 Nights / 6 Days Tour
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header">Day 2: May 16, 2024</div>
-        <div class="card-body">
-          <ul>
-            <li>Hotel pickup and ferry ride to Havelock Island.</li>
-            <li>Explore Radhanagar Beach.</li>
-            <li>Leisure time to enjoy the island's beauty.</li>
-          </ul>
+      <!-- Link to each tab with onclick event -->
+      <div id="tabsDiv">
+        <button
+          class="linkClass active"
+          onclick="displayContent(event, 'dayplan')"
+        >
+          Day Plan
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'history')">
+          History
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'inc&exc')">
+          Inclusion & Exclusion
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'pricing')">
+          Pricing
+        </button>
+      </div>
+
+      <!-- Content for each HTML tab  -->
+      <div id="dayplan" class="contentClass">
+        <div>
+          <h3 style="margin-top: 25px">Day 1:May 15, 2024</h3>
+          <div class="timeline">
+            <ul class="animated-list">
+              <li></li>
+              <li>Airport pickup and warm welcome.</li>
+              <li>Hotel transfer for a delightful stay.</li>
+              <li>Visit the historic Cellular Jail.</li>
+              <li>Relax at Corbyn's Cove Beach.</li>
+              <li>
+                Experience the mesmerizing Light & Sound Show at Cellular Jail.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 1:May 15, 2024</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>Airport pickup and warm welcome.</li>
+              <li>Hotel transfer for a delightful stay.</li>
+              <li>Visit the historic Cellular Jail.</li>
+              <li>Relax at Corbyn's Cove Beach.</li>
+              <li>
+                Experience the mesmerizing Light & Sound Show at Cellular Jail.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 1:May 15, 2024</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>Airport pickup and warm welcome.</li>
+              <li>Hotel transfer for a delightful stay.</li>
+              <li>Visit the historic Cellular Jail.</li>
+              <li>Relax at Corbyn's Cove Beach.</li>
+              <li>
+                Experience the mesmerizing Light & Sound Show at Cellular Jail.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 1:May 15, 2024</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>Airport pickup and warm welcome.</li>
+              <li>Hotel transfer for a delightful stay.</li>
+              <li>Visit the historic Cellular Jail.</li>
+              <li>Relax at Corbyn's Cove Beach.</li>
+              <li>
+                Experience the mesmerizing Light & Sound Show at Cellular Jail.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Add cards for Days 3 to 6 similarly -->
-      <div class="card">
-        <div class="card-header">Day 1: May 15, 2024</div>
-        <div class="card-body">
-          <ul>
-            <li>Airport pickup and warm welcome.</li>
-            <li>Hotel transfer for a delightful stay.</li>
-            <li>Visit the historic Cellular Jail.</li>
-            <li>Relax at Corbyn's Cove Beach.</li>
-            <li>
-              Experience the mesmerizing Light & Sound Show at Cellular Jail.
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div id="history" class="contentClass"></div>
 
-      <div class="card">
-        <div class="card-header">Day 2: May 16, 2024</div>
-        <div class="card-body">
-          <ul>
-            <li>Hotel pickup and ferry ride to Havelock Island.</li>
-            <li>Explore Radhanagar Beach.</li>
-            <li>Leisure time to enjoy the island's beauty.</li>
-          </ul>
-        </div>
-      </div>
+      <div id="inc&exc" class="contentClass"></div>
+
+      <div id="pricing" class="contentClass"></div>
 
       <!-- Price Calculator -->
-      <div class="price-calculator">
+      <div
+        class="price-calculator"
+        style="margin-top: 50px; border-color: #ffa500"
+      >
         <h2>Price Calculator</h2>
         <form id="priceForm">
           <label for="adults">Number of Adults:</label>
@@ -152,16 +192,81 @@
             value="0"
           />
 
-          <button type="button" onclick="calculatePrice()">
+          <button
+            type="button"
+            style="background-color: #ffa500; color: white; font-weight: 600"
+            onclick="calculatePrice()"
+          >
             Calculate Total Price
           </button>
         </form>
         <div class="result" id="result"></div>
       </div>
     </div>
-    
+
+    <section class="footer" style="margin-top: 100px">
+      <div class="box-container">
+        <div class="box">
+          <h3>about us</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            quas magni pariatur est accusantium voluptas enim nemo facilis sit
+            debitis.
+          </p>
+        </div>
+        <div class="box">
+          <h3>branch locations</h3>
+          <a href="#">Pune</a>
+          <a href="#">Solapur</a>
+          <a href="#">Mumbai</a>
+          <a href="#">Nashik</a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">home</a>
+          <a href="#book">book</a>
+          <a href="#packages">packages</a>
+          <a href="#services">services</a>
+          <a href="#gallery">gallery</a>
+          <a href="#review">review</a>
+          <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">twitter</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+      <h1 class="credit">
+        created by <span>M</span>ass <span>I</span>t <span>S</span>olutions |
+        Visit Again
+      </h1>
+    </section>
 
     <script>
+      const listItems = document.querySelectorAll(
+        ".animated-list li,#dayplan h3"
+      );
+
+      // Apply fade-in animation with staggered delays
+      listItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("fade-in");
+        }, index * 100); // Delay for each list item
+      });
+
+      // animation for day headings
+      const listHeading = document.querySelectorAll("#dayplan h3");
+
+      // Apply fade-in animation with staggered delays
+      listHeading.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("heading-transition");
+        }, index * 500); // Delay for each list item
+      });
+
       function calculatePrice() {
         const adultPrice = 30500;
         const childPrice = 18800;
