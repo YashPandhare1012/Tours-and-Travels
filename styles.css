@@ -833,3 +833,23 @@ button:hover {
     transform: translateX(0);
   }
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th,
+td {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 8px;
+}
+th {
+  background-color: #800000;
+  color: white;
+}
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
