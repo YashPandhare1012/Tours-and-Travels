@@ -479,6 +479,64 @@ header .search-bar-container label:hover {
   color: #eee;
   padding: 0.5rem 0;
 }
+.manali-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between cards as needed */
+  justify-content: center; /* Centers the cards horizontally */
+  flex-wrap: wrap; /* Ensures cards wrap to the next line on smaller screens */
+  padding: 20px; /* Optional: Add padding around the container */
+}
+
+.manali-card {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.manali-card:hover {
+  transform: scale(1.05);
+}
+
+.manali-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.manali-card:hover .manali-image {
+  opacity: 0.7;
+}
+
+.manali-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.manali-card:hover .manali-overlay {
+  opacity: 1;
+}
+
+.manali-text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
 
 .review .review-slider {
   padding-bottom: 2rem;
@@ -697,6 +755,19 @@ header .search-bar-container label:hover {
   margin-bottom: 10px;
 }
 
+.Bangkok-heading {
+  font-size: 5rem;
+  display: block;
+  background-image: url("./Images/Bangkok-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 530px;
+  width: 1080px;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
 .linkClass {
   border-radius: 5px 5px 0px 0px;
   border: solid 2px #ffa500;
