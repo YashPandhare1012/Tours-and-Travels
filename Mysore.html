@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mysore Ooty Tour</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body class="page-andaman">
+    <!-- header of page -->
+    <header class="header-andaman">
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <img
+        src="Images/logo.jpg"
+        alt="Magical Holidays"
+        style="
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 5px;
+        "
+      />
+      <a href="#" class="logo"><span>M</span>agical <span>H</span>olidays</a>
+
+      <nav class="navbar">
+        <a href="#">home</a>
+        <a href="#">packages</a>
+        <a href="#">services</a>
+        <a href="#">book</a>
+        <a href="#">gallery</a>
+        <a href="#">review</a>
+        <a href="#">contact</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+
+    <div class="container2">
+      <!-- title of page -->
+      <div class="location-heading">
+        <div
+          style="
+            background-color: black;
+            width: inherit;
+            height: inherit;
+            border-radius: 8px;
+            opacity: 0.4;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            top: 450px;
+            right: 120px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+          "
+        >
+          Mysore Ooty 7Nights /8Days Tour
+        </div>
+      </div>
+
+      <!-- Link to each tab with onclick event -->
+      <div id="tabsDiv">
+        <button
+          class="linkClass active"
+          onclick="displayContent(event, 'dayplan')"
+        >
+          Day Plan
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'history')">
+          Hotel
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'inc&exc')">
+          Inclusion & Exclusion
+        </button>
+
+        <button class="linkClass" onclick="displayContent(event, 'pricing')">
+          Pricing
+        </button>
+      </div>
+
+      <!-- Content for each HTML tab  -->
+      <div id="dayplan" class="contentClass">
+        <div>
+          <h3 style="margin-top: 25px">Day 1:</h3>
+          <div class="timeline">
+            <ul class="animated-list">
+              <li></li>
+              <li><b> Arrive Bangalore or Coimbatore to Kodaikanal</b></li>
+              <li>
+                Pickup from arrival and proceed to Kodaikanal. On arrival,
+                check-in to the hotel. Evening visit to Cookers Walk, Green
+                Valley View, Kodai Lake (star-shaped lake), and Bryant Park.
+                Overnight stay at Kodaikanal.
+              </li>
+              <li>
+                <b> Distance:</b>Bangalore to Kodaikanal- 480 Kms /9Hoursbyroad
+              </li>
+              <li>
+                <b> Distance:</b>Coimbatore to Kodaikanal- 190 Kms /5.5 Hours
+                byroad
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 2:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li><b> Kodaikanal Local Sightseeing</b></li>
+              <li>
+                After breakfast, visit Pillar Rocks, Silent Valley View, Berijam
+                Lake View, Silver Cascade Falls, Devil’s Kitchen (Guna Caves),
+                Pine Forest, and Kurinji Andavar Temple. Return to the hotel for
+                an overnight stay.
+              </li>
+              <li>
+                (Note: Prior permission is needed for Berijam Lake View;
+                coverage depends on availability).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 3:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                <b> Kodaikanal to Ooty Local Sightseeing</b>
+              </li>
+              <li>
+                After breakfast, check out and proceed to Ooty. On arrival,
+                check in to the hotel. Visit Rose Garden, Ooty Lake, and
+                Botanical Garden. Overnight stay at Ooty
+              </li>
+              <li>
+                <b>Distance:</b>Kodaikanal to Ooty- 270 Kms/7Hours by road
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Day 4:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li><b> Ooty &Coonoor Local Sightseeing</b></li>
+              <li>
+                After breakfast, proceed to Coonoor for sightseeing: Sim’s Park,
+                Lam’s Rock, Dolphin Nose, Ketti Valley (scenic views), Tea
+                Factory, Tea Museum, and Doddabetta Peak (highest peak of
+                Nilgiri mountains). Return to Ooty for an overnight stay
+              </li>
+              <li><b>Distance:</b> Ooty to Coonoor-50Kms/2 Hours by road</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>Day 5:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                <b> Ooty to Coorg</b>
+              </li>
+              <li>
+                After breakfast, check out and proceed to Coorg. En route, visit
+                NisargaDhama and the Tibetan Golden Temple. On arrival, check in
+                to the hotel. In the evening, visit Raja’s Seat for scenic
+                views. Overnight stay at Coorg.
+              </li>
+              <li><b> Distance:</b>Ooty to Coorg-265Kms/6.5 Hours by road</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>Day 6:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                <b> Coorg Local Sightseeing</b>
+              </li>
+              <li>
+                After breakfast, visit Tala Kaveri Temple, Bhagamandala
+                (Bhagandeshwara Temple), Omkareshwara Temple, Madikeri Fort, and
+                Abbey Falls and Dubare Elephant Camp. Return to the hotel for an
+                overnight stay.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>Day 7:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                <b> Coorg to Mysore Local Sightseeing</b>
+              </li>
+              <li>
+                After breakfast, check out and proceed to Mysore. En route,
+                visit Saint Philomena's Church, Big Bull, Mysore Zoo, Chamundi
+                Hill (Goddess Chamundeshwari), and Maharaja’s Mysore Palace. In
+                the evening, visit Brindavan Gardens (botanical park with
+                musical fountains). Overnight stay at Mysore.
+              </li>
+              <li><b> Distance:</b>Coorg to Mysore-130Kms/3.5 Hours by road</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3>Day 8:</h3>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                <b>Mysore to Bangalore Drop</b>
+              </li>
+              <li>
+                After breakfast, check out and proceed to Bangalore. En route,
+                visit Srirangapatna (Dariya Daulat Bagh, Gumbaz, Tippu Fort, and
+                Sri Ranganathaswamy Temple). Drop at Bangalore for your onward
+                journey.
+              </li>
+              <li>
+                <b> Distance:</b>Mysore to Bangalore- 160 Kms/3.5 Hours by road
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="history" class="contentClass">
+        <table>
+          <thead>
+            <tr>
+              <th>HOTEL NAME</th>
+              <th>TYPE OF ROOM</th>
+              <th>PLACE</th>
+              <th>ROOMS</th>
+              <th>EXTRA MATTRESS</th>
+              <th>NIGHTS</th>
+              <th>MEAL PLAN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kodai Sunshine Resort</td>
+              <td>Premium</td>
+              <td>Kodaikanal</td>
+              <td>3</td>
+              <td>1</td>
+              <td>2</td>
+              <td>CP</td>
+            </tr>
+            <tr>
+              <td>Deccan Park Resort</td>
+              <td>Eco Villa</td>
+              <td>Ooty</td>
+              <td>3</td>
+              <td>1</td>
+              <td>2</td>
+              <td>CP</td>
+            </tr>
+            <tr>
+              <td>Hotel Madikeri Heritage</td>
+              <td>Casa Aqua</td>
+              <td>Coorg</td>
+              <td>3</td>
+              <td>1</td>
+              <td>2</td>
+              <td>CP</td>
+            </tr>
+            <tr>
+              <td>Mysore County Retreat</td>
+              <td>Casa Aqua</td>
+              <td>Mysore</td>
+              <td>3</td>
+              <td>1</td>
+              <td>1</td>
+              <td>CP</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Price Details Section -->
+        <table>
+          <thead>
+            <tr>
+              <th>DETAILS</th>
+              <th>PRICE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="highlight">Price for 6 people minimum</td>
+              <td>
+                <span class="highlight">@ 31000 INR Per person.</span><br />
+              </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="highlight">@ 31000 INR FOR 6 PAX</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="inc&exc" class="contentClass">
+        <div>
+          <h1>Inclusions</h1>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>Airport and Station Pickup & Drop.</li>
+              <li>Air Condition Vehicle (AC Innova) for the entire tour.</li>
+              <li>7 Night Accommodation on double and twin sharing basis.</li>
+              <li>Breakfast & Dinner at your hotel.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h1>Exclusions</h1>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>Flight tickets & Train Tickets.</li>
+              <li>Camera fees(still or movie).</li>
+              <li>All types of personal expenses.</li>
+              <li>Entry fees to Museums and Monuments</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <div>
+          <h1>TERMS AND CONDITIONS</h1>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                ALL CORRESPONDENCE(S) REGARDING TOURS / TRAVEL SERVICE BOOKINGS
+                SHOULD BE ADDRESSED TO MAGICAL HOLIDAYS
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="pricing" class="contentClass">
+        <!-- Price Calculator -->
+        <div
+          class="price-calculator"
+          style="margin-top: 50px; border-color: #ffa500"
+        >
+          <h2>Price Calculator</h2>
+          <form id="priceForm">
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" min="0" value="0" />
+
+            <label for="children">Number of Children:</label>
+            <input
+              type="number"
+              id="children"
+              name="children"
+              min="0"
+              value="0"
+            />
+
+            <button
+              type="button"
+              style="background-color: #ffa500; color: white; font-weight: 600"
+              onclick="calculatePrice()"
+            >
+              Calculate Total Price
+            </button>
+          </form>
+          <div class="result" id="result"></div>
+        </div>
+        <div>
+          <h1>PAYMENTS</h1>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                FOR ALL THE SERVICES CONTRACTED, A 50% ADVANCE PAYMENT SHOULD BE
+                MADE TO HOLD THE BOOKING, ON A CONFIRMED BASIS & THE BALANCE
+                AMOUNT CAN BE PAID TO MAGICAL HOLIDAYS BEFORE YOU START YOUR
+                JOURNEY. MANAGEMENT PERSONNEL HOLDS THE RIGHT TO DECIDE UPON THE
+                AMOUNT TO BE PAID AS ADVANCE PAYMENT, BASED ON THE NATURE OF THE
+                SERVICE & THE TIME LEFT FOR THE COMMENCEMENT OF THE SERVICE.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h1>CANCELLATION POLICY:</h1>
+
+          <div class="timeline">
+            <ul class="animated-list">
+              <li>
+                IN THE EVENT OF CANCELLATION OF TOUR/TRAVEL SERVICES DUE TO ANY
+                AVOIDABLE/UNAVOIDABLE REASON/S, WE MUST BE NOTIFIED OF THE SAME
+                IN WRITING. CANCELLATION CHARGES WILL BE EFFECTIVE FROM THE DATE
+                WE RECEIVE ADVICE IN WRITING, AND CANCELLATION CHARGES WOULD BE
+                AS PER THE HOTEL AND TRANSPORT GUIDELINES.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer" style="margin-top: 100px">
+      <div class="box-container">
+        <div class="box">
+          <h3>about us</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            quas magni pariatur est accusantium voluptas enim nemo facilis sit
+            debitis.
+          </p>
+        </div>
+        <div class="box">
+          <h3>branch locations</h3>
+          <a href="#">Pune</a>
+          <a href="#">Solapur</a>
+          <a href="#">Mumbai</a>
+          <a href="#">Nashik</a>
+        </div>
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home">home</a>
+          <a href="#book">book</a>
+          <a href="#packages">packages</a>
+          <a href="#services">services</a>
+          <a href="#gallery">gallery</a>
+          <a href="#review">review</a>
+          <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">twitter</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+      <h1 class="credit">
+        Thanks and Regards | <span>M</span>agical <span>H</span>olidays | Visit
+        Again
+      </h1>
+    </section>
+
+    <script>
+      const listItems = document.querySelectorAll(
+        ".animated-list li,#dayplan h3"
+      );
+
+      // Apply fade-in animation with staggered delays
+      listItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("fade-in");
+        }, index * 100); // Delay for each list item
+      });
+
+      // animation for day headings
+      const listHeading = document.querySelectorAll("#dayplan h3");
+
+      // Apply fade-in animation with staggered delays
+      listHeading.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("heading-transition");
+        }, index * 500); // Delay for each list item
+      });
+
+      function calculatePrice() {
+        const adultPrice = 30500;
+        const childPrice = 18800;
+
+        const adults = parseInt(document.getElementById("adults").value) || 0;
+        const children =
+          parseInt(document.getElementById("children").value) || 0;
+
+        const totalPrice = adults * adultPrice + children * childPrice;
+        document.getElementById(
+          "result"
+        ).textContent = `Total Price: INR ${totalPrice}`;
+      }
+    </script>
+  </body>
+</html>
